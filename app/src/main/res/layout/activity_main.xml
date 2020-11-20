@@ -24,7 +24,7 @@
             android:layout_centerInParent="true"/>
 
         <Button
-            android:id="@+id/nextButton"
+            android:id="@+id/menuButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Menu"
