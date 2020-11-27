@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
     private TextView titleText;
-    private Button menuButton;
+    private Button prevButton, nextButton;
     private DateMonth mDateMonth;
     private GridView calendarGridView;
 
@@ -21,8 +21,16 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         titleText = findViewById(R.id.titleText);
-        menuButton = findViewById(R.id.menuButton);
-        menuButton.setOnClickListener(new View.OnClickListener() {
+        prevButton = findViewById(R.id.prevButton);
+        prevButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDateMonth.nextMonth();
+                titleText.setText(mDateMonth.getTitle());
+            }
+        });
+        nextButton = findViewById(R.id.nextButton);
+        nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mDateMonth.nextMonth();
