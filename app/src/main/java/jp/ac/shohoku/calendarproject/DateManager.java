@@ -73,4 +73,11 @@ public class DateManager {
     public void prevMonth(){
         mCalendar.add(Calendar.MONTH, -1);
     }
+
+    //当日背景色のみ変える
+    public boolean isToday(Date date) {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd", Locale.US);
+        String today = format.format(Calendar.getInstance().getTime());
+        return today.equals(format.format(date));
+    }
 }
