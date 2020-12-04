@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class DateMonth extends BaseAdapter {
+public class Adapter extends BaseAdapter {
     private List<Date> dateArray = new ArrayList();
     private Context mContext;
     private DateManager mDateManager;
@@ -27,7 +27,7 @@ public class DateMonth extends BaseAdapter {
         public TextView dateText;
     }
 
-    public DateMonth(Context context){
+    public Adapter(Context context){
         mContext = context;
         mLayoutInflater = LayoutInflater.from(mContext);
         mDateManager = new DateManager();
@@ -65,6 +65,11 @@ public class DateMonth extends BaseAdapter {
             convertView.setBackgroundColor(Color.WHITE);
         }else {
             convertView.setBackgroundColor(Color.LTGRAY);
+        }
+
+        //当日の背景を黄色に（今回追記）
+        if (mDateManager.isToday(dateArray.get(position))) {
+            convertView.setBackgroundColor(Color.rgb(235,250,255));
         }
 
         //日曜日を赤、土曜日を青に
