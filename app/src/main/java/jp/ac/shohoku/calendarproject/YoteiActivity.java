@@ -25,7 +25,7 @@ public class YoteiActivity extends AppCompatActivity {
         modoruButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ConstraintLayout yotei = findViewById(R.id.yoteilayout1);
+                ConstraintLayout yotei = findViewById(R.id.shinki);
                 yotei.removeAllViews();
                 getLayoutInflater().inflate(R.layout.activity_main, yotei);
             }
