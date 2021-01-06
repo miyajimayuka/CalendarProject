@@ -88,6 +88,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:textColorHint="#121111"
+            android:textSize="30dp"
             android:textColorLink="#9F5F5F" />
 
         <LinearLayout
