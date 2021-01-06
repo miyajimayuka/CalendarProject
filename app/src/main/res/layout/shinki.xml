@@ -10,9 +10,12 @@
     <LinearLayout
         android:layout_width="798dp"
         android:layout_height="1278dp"
+        android:background="#FDFCFC"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView9"
@@ -51,6 +54,13 @@
 
         </LinearLayout>
 
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="タイトル" />
 
 
     </LinearLayout>
