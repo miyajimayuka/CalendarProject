@@ -1,33 +1,31 @@
 package jp.ac.shohoku.calendarproject;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.SyncStateContract;
-import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
+public class YoteiActivity extends Activity {
 
-public class YoteiActivity extends AppCompatActivity {
-
-    private Button modoruButton;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shinki);
 
-        modoruButton = findViewById(R.id.button3);
-        modoruButton.setOnClickListener(new View.OnClickListener() {
+        // ボタンを押したときにイベントを取得できるようにする
+        Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                ConstraintLayout yotei = findViewById(R.id.shinki);
-                yotei.removeAllViews();
-                getLayoutInflater().inflate(R.layout.activity_main, yotei);
+                //インテントに、この画面と、遷移する別の画面を指定する
+                Intent intent = new Intent(YoteiActivity.this, MainActivity.class);
+
+                //インテントで指定した別の画面に遷移する
+                startActivity(intent);
             }
         });
     }

@@ -1,18 +1,16 @@
 package jp.ac.shohoku.calendarproject;
 
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private TextView titleText;
     private Button prevButton, nextButton, yoteiButton;
@@ -52,12 +50,12 @@ public class MainActivity extends AppCompatActivity {
         yoteiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LinearLayout layout = (LinearLayout) findViewById(R.id.linearlayout1);
-                layout.removeAllViews();
-                getLayoutInflater().inflate(R.layout.shinki, layout);
-            }
+                //インテントに、この画面と、遷移する別の画面を指定する
+                Intent intent = new Intent(MainActivity.this, YoteiActivity.class);
 
+                //インテントで指定した別の画面に遷移する
+                startActivity(intent);
+            }
         });
     }
-
 }
