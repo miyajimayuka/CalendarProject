@@ -21,6 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="129dp"
             android:text="MENU"
+            android:textColor="#3A3939"
             android:textSize="100sp" />
 
         <TextView
@@ -32,7 +33,8 @@
             android:id="@+id/button6"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:text="カレンダー" />
+            android:text="➢カレンダー"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView13"
@@ -43,7 +45,8 @@
             android:id="@+id/button9"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:text="歩数計" />
+            android:text="➢歩数計"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView14"
@@ -54,7 +57,13 @@
             android:id="@+id/button10"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:text="天気予報" />
+            android:text="➢天気予報"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="694dp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
