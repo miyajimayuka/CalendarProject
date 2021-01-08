@@ -44,6 +44,7 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="予定追加"
+                android:textColor="#292828"
                 android:textSize="80dp" />
 
             <Button
@@ -87,9 +88,9 @@
             android:layout_height="142dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:textColorHint="#121111"
+            android:textColorHint="#111111"
             android:textSize="30dp"
-            android:textColorLink="#9F5F5F" />
+            android:textColorLink="#111111" />
 
         <LinearLayout
             android:layout_width="match_parent"
