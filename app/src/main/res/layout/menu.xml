@@ -73,13 +73,19 @@
         <TextView
             android:id="@+id/textView15"
             android:layout_width="match_parent"
-            android:layout_height="694dp" />
+            android:layout_height="40dp" />
 
-        <TextView
-            android:id="@+id/textView16"
+        <Button
+            android:id="@+id/button11"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_height="140dp"
+            android:background="#FCA8A7A7"
+            android:text="戻る➢"
+            android:textColor="#373434"
+            android:textColorHint="#4E4343"
+            android:textSize="30sp" />
+
+
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
