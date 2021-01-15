@@ -166,8 +166,16 @@
             android:text="+"
             android:textSize="45dp" />
 
-
-
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="false"
+            android:layout_marginVertical="20dp"
+            android:layout_marginStart="200dp"
+            android:background="#ffb6c1"
+            android:text="menu"
+            android:textSize="30dp" />
 
 
     </RelativeLayout>
