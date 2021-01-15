@@ -6,23 +6,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class YoteiActivity extends Activity {
+public class MenuActivity extends Activity {
 
-    private Button modorubutton;
+    private Button modoru;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.shinki);
+        setContentView(R.layout.menu);
 
         // ボタンを押したときにイベントを取得できるようにする
-        Button modorubutton = (Button) findViewById(R.id.button);
-        modorubutton.setOnClickListener(new View.OnClickListener() {
+        Button modoru = (Button) findViewById(R.id.button11);
+        modoru.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 //インテントに、この画面と、遷移する別の画面を指定する
-                Intent intent = new Intent(YoteiActivity.this, MainActivity.class);
+                Intent intent = new Intent(MenuActivity.this, MainActivity.class);
 
                 //インテントで指定した別の画面に遷移する
                 startActivity(intent);

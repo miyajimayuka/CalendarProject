@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
     private TextView titleText;
-    private Button prevButton, nextButton, yoteiButton;
+    private Button prevButton, nextButton, yoteiButton, menuButton;
     private Adapter adapter;
     private GridView calendarGridView;
 
@@ -52,6 +52,19 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 //インテントに、この画面と、遷移する別の画面を指定する
                 Intent intent = new Intent(MainActivity.this, YoteiActivity.class);
+
+                //インテントで指定した別の画面に遷移する
+                startActivity(intent);
+            }
+        });
+
+        //メニューボタンを押したら追加画面へ
+        menuButton = findViewById(R.id.button2);
+        menuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //インテントに、この画面と、遷移する別の画面を指定する
+                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
 
                 //インテントで指定した別の画面に遷移する
                 startActivity(intent);
