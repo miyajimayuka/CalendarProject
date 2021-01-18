@@ -81,12 +81,36 @@
             android:textSize="50sp" />
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/dateView"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="    日付"
+            android:textColor="#070707"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/showdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="" />
+            android:clickable="true"
+            android:focusable="false"
+            android:gravity="center_horizontal"
+            android:ems="10"
+            android:inputType="date"
+            android:text="日付選択"
+            android:textSize="24sp" />
 
         <TextView
+            android:id="@+id/nodate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:ems="10"
+            android:inputType="date"
+            android:text="select date"
+            android:textSize="24sp" />
+
+    <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="47dp"

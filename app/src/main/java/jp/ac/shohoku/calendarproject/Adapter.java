@@ -69,7 +69,7 @@ public class Adapter extends BaseAdapter {
 
         //当日の背景を黄色に（今回追記）
         if (mDateManager.isToday(dateArray.get(position))) {
-            convertView.setBackgroundColor(Color.rgb(255,182,193));
+            convertView.setBackgroundColor(Color.rgb(135,206,235));
         }
 
         //日曜日を赤、土曜日を青に
