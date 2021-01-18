@@ -44,27 +44,19 @@ public class YoteiActivity extends Activity {
             @Override
             public void onClick(View v) {
                 // カレンダーインスタンスを取得
-                Calendar date = Calendar.getInstance();
+                Calendar c = Calendar.getInstance();
 
                 // DatePickerDialogインスタンスを取得
-                DatePickerDialog datePickerDialog = new DatePickerDialog(
-                        YoteiActivity.this, new DatePickerDialog.OnDateSetListener() {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(YoteiActivity.this, new DatePickerDialog.OnDateSetListener() {
 
-                    public void onDateSet(
-                            DatePicker view,
-                            int year,
-                            int monthOfYear,
-                            int dayOfMonth) {
-
-                        // Setした日付を取得する
-                        nodate.setText(year + "年" +
-                                (monthOfYear + 1) + "月" + dayOfMonth + "日");
-
+                    public void onDateSet(DatePicker view, int year, int month, int day) {
+                        // 設定した日付を取得する
+                        nodate.setText(year + "." +
+                                (month + 1) + "." + day + "");
                     }
-                }, date.get(Calendar.YEAR), date.get(Calendar.MONTH), date.get(Calendar.DATE));
+                }, c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DATE));
                 // ダイアログを表示する
                 datePickerDialog.show();
-
             }
         });
     }
