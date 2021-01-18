@@ -43,8 +43,6 @@ public class YoteiActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-
-
                 // カレンダーインスタンスを取得
                 Calendar date = Calendar.getInstance();
 
@@ -63,10 +61,7 @@ public class YoteiActivity extends Activity {
                                 (monthOfYear + 1) + "月" + dayOfMonth + "日");
 
                     }
-                }, date.get(Calendar.YEAR), date.get(Calendar.MONTH),
-                        date.get(Calendar.DATE)
-                );
-
+                }, date.get(Calendar.YEAR), date.get(Calendar.MONTH), date.get(Calendar.DATE));
                 // ダイアログを表示する
                 datePickerDialog.show();
 
