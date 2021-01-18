@@ -61,7 +61,8 @@
             android:gravity="center_horizontal"
             android:text="日"
             android:textAlignment="center"
-            android:textColor="#ff0000" />
+            android:textColor="#ff0000"
+            android:textSize="20dp"/>
 
         <TextView
             android:layout_width="0dp"
@@ -72,7 +73,8 @@
             android:gravity="center_horizontal"
             android:text="月"
             android:textAlignment="center"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20dp"/>
 
         <TextView
             android:layout_width="0dp"
@@ -83,7 +85,8 @@
             android:gravity="center_horizontal"
             android:text="火"
             android:textAlignment="center"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20dp"/>
 
         <TextView
             android:layout_width="0dp"
@@ -94,7 +97,8 @@
             android:gravity="center_horizontal"
             android:text="水"
             android:textAlignment="center"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20dp"/>
 
         <TextView
             android:layout_width="0dp"
@@ -105,7 +109,8 @@
             android:gravity="center_horizontal"
             android:text="木"
             android:textAlignment="center"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20dp"/>
 
         <TextView
             android:layout_width="0dp"
@@ -116,7 +121,8 @@
             android:gravity="center_horizontal"
             android:text="金"
             android:textAlignment="center"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="20dp"/>
 
         <TextView
             android:layout_width="0dp"
@@ -127,7 +133,8 @@
             android:gravity="center_horizontal"
             android:text="土"
             android:textAlignment="center"
-            android:textColor="#4169e1" />
+            android:textColor="#4169e1"
+            android:textSize="20dp"/>
 
 
     </LinearLayout>
@@ -141,7 +148,7 @@
         android:horizontalSpacing="3dp"
         android:numColumns="7"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="1dp">
+        android:verticalSpacing="1dp" >
 
     </GridView>
 
