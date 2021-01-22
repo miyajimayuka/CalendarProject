@@ -18,23 +18,49 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView18"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="" />
-
-        <TextView
             android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="112dp"
-            android:text="New Appointment"
-            android:textColor="#0E0E0E"
-            android:textSize="70dp" />
+            android:text="" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="149dp"
+                android:layout_height="83dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:text="戻る" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="385dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="予定追加"
+                android:textColor="#292828"
+                android:textSize="80dp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="165dp"
+                android:layout_height="83dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:text="決定" />
+
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/textView1"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="70dp"
             android:text="" />
 
         <TextView
@@ -46,7 +72,7 @@
             android:textSize="30dp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/titletext"
             android:layout_width="match_parent"
             android:layout_height="125dp"
             android:ems="10"
@@ -93,7 +119,7 @@
             android:textSize="30dp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/memotext"
             android:layout_width="match_parent"
             android:layout_height="142dp"
             android:ems="10"
@@ -104,7 +130,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="111dp"
+            android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <Switch
@@ -126,46 +152,22 @@
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="49dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="149dp"
-            android:layout_height="83dp"
-            android:layout_weight="1"
-            android:textSize="30dp"
-            android:text="戻る" />
+            android:layout_height="wrap_content"
+            android:text="TextView" />
 
         <TextView
-            android:id="@+id/textView10"
-            android:layout_width="385dp"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text=""
-            android:textColor="#292828"
-            android:textSize="80dp" />
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="165dp"
-            android:layout_height="83dp"
-            android:layout_weight="1"
-            android:textSize="30dp"
-            android:text="決定" />
-
-
-        </LinearLayout>
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
 
     </LinearLayout>
-
 
 
 
