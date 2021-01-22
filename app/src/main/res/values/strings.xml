@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CalendarProject</string>
+    <string name="hello">Hello World, Dialog07Activity!</string>
+    <string name="date_format">%tF</string>
 </resources>
