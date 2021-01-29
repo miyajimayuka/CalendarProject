@@ -25,6 +25,8 @@ public class Adapter extends BaseAdapter {
     //カスタムセルを拡張したらここでWigetを定義
     private static class ViewHolder {
         public TextView dateText;
+
+        public TextView dataTitle;
     }
 
     public Adapter(Context context){
@@ -47,6 +49,7 @@ public class Adapter extends BaseAdapter {
             holder = new ViewHolder();
             holder.dateText = convertView.findViewById(R.id.dateText);
             convertView.setTag(holder);
+
         } else {
             holder = (ViewHolder)convertView.getTag();
         }
@@ -59,6 +62,7 @@ public class Adapter extends BaseAdapter {
         //日付のみ表示させる
         SimpleDateFormat dateFormat = new SimpleDateFormat("d", Locale.US);
         holder.dateText.setText(dateFormat.format(dateArray.get(position)));
+
 
         //当月以外のセルをグレーアウト
         if (mDateManager.isCurrentMonth(dateArray.get(position))){
@@ -93,11 +97,13 @@ public class Adapter extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
+
         return 0;
     }
 
     @Override
     public Object getItem(int position) {
+
         return null;
     }
 

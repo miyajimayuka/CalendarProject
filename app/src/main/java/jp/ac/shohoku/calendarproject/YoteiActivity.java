@@ -15,9 +15,9 @@ import java.util.Calendar;
 public class YoteiActivity extends Activity {
 
     private Button modorubutton, decButton, showdate;
-    private TextView nodate, datet;
-    private EditText tit = null;
-    private EditText memot = null;
+    private TextView nodate;
+    private EditText dataTitle = null;
+    private EditText memoText = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,22 +38,6 @@ public class YoteiActivity extends Activity {
                 startActivity(intent);
             }
         });
-
-        // 決定ボタン処理
-        EditText tit = (EditText)findViewById(R.id.titletext);
-        TextView datet = (TextView)findViewById(R.id.nodate);
-        EditText memot = (EditText)findViewById(R.id.memotext);
-        Button decButton = (Button) findViewById(R.id.button3);
-        decButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(YoteiActivity.this, MainActivity.class);
-                //intent.putExtra("title", tit.getText().toString());
-                //intent.putExtra("hiduke", datet.getText().toString());
-                //intent.putExtra("memo", memot.getText().toString());
-            }
-        });
-
 
 
         // 日付選択
@@ -77,6 +61,19 @@ public class YoteiActivity extends Activity {
                 }, c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DATE));
                 // ダイアログを表示する
                 datePickerDialog.show();
+            }
+        });
+
+        // 決定ボタン処理
+        dataTitle = (EditText) findViewById(R.id.titletext);
+        Button decButton = (Button) findViewById(R.id.button3);
+        decButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(YoteiActivity.this, MainActivity.class);
+                i.putExtra("DataTitle",dataTitle.getText().toString());
+                i.putExtra("Date",nodate.getText().toString());
+                startActivity(i);
             }
         });
     }
