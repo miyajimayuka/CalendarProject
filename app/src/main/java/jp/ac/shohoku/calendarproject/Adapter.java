@@ -34,6 +34,7 @@ public class Adapter extends BaseAdapter {
         mLayoutInflater = LayoutInflater.from(mContext);
         mDateManager = new DateManager();
         dateArray = mDateManager.getDays();
+        //dataTitleArray = mDateManager.getdataTtile();
     }
 
     @Override
@@ -50,6 +51,9 @@ public class Adapter extends BaseAdapter {
             holder.dateText = convertView.findViewById(R.id.dateText);
             convertView.setTag(holder);
 
+            holder.dataTitle = convertView.findViewById(R.id.dataTitle);
+            convertView.setTag(holder);
+
         } else {
             holder = (ViewHolder)convertView.getTag();
         }
@@ -62,6 +66,8 @@ public class Adapter extends BaseAdapter {
         //日付のみ表示させる
         SimpleDateFormat dateFormat = new SimpleDateFormat("d", Locale.US);
         holder.dateText.setText(dateFormat.format(dateArray.get(position)));
+
+        //holder.dateTitle.setText(dateFormat.format(dateTitleArray.get(position)));
 
 
         //当月以外のセルをグレーアウト

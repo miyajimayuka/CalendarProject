@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MenuActivity extends Activity {
 
-    private Button modoru;
+    private Button modoru, todo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,5 +28,19 @@ public class MenuActivity extends Activity {
                 startActivity(intent);
             }
         });
+
+        Button todo = (Button) findViewById(R.id.button6);
+        todo.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                //インテントに、この画面と、遷移する別の画面を指定する
+                Intent intent = new Intent(MenuActivity.this, TodoActivity.class);
+
+                //インテントで指定した別の画面に遷移する
+                startActivity(intent);
+            }
+        });
+
     }
 }

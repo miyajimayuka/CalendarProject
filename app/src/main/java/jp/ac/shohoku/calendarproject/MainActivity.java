@@ -12,10 +12,12 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.TextView;
 
+import java.util.Calendar;
+
 
 public class MainActivity extends Activity {
 
-    private TextView titleText;
+    private TextView titleText, dataTitle, dataHiduke;
     private Button prevButton, nextButton, yoteiButton, menuButton;
     private Adapter adapter;
     private GridView calendarGridView;
@@ -73,6 +75,11 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+
+        dataTitle = (TextView)findViewById(R.id.dataTitle);
+        //dataHiduke = (TextView)findViewById(R.id.)
+        Calendar calendar = Calendar.getInstance();
+
 
     }
 
