@@ -1,49 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearlayout1"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#696969"
-    android:orientation="vertical"
-    tools:context="jp.ac.shohoku.calendarproject.TodoActivity">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
 
-    <RelativeLayout
+    <TextView
+        android:id="@+id/todo"
         android:layout_width="match_parent"
-        android:layout_height="668dp"
-        android:layout_weight="1.5"
-        android:background="#00bfff">
+        android:layout_height="130dp"
+        android:background="#00bfff"
+        android:gravity="center_horizontal"
+        android:text="Todoリスト"
+        android:textSize="100dp" />
 
-        <TextView
-            android:id="@+id/todoLabel"
+    <ListView
+        android:id="@+id/itemListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/memoEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#00bfff"
-            android:gravity="center"
-            android:text="Todoリスト"
-            android:textColor="#000000"
-            android:textSize="40dp"
-            android:textStyle="bold" />
+            android:layout_weight="1"
+            android:inputType="textMultiLine">
 
-        <ListView
-            android:id="@+id/listTodo"
-            android:layout_width="match_parent"
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#ffffff">
-
-        </ListView>
-    </RelativeLayout>
-
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_input_add" />
-
-
-
+            android:text="保存" />
+    </LinearLayout>
 </LinearLayout>

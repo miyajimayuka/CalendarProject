@@ -2,11 +2,14 @@ package jp.ac.shohoku.calendarproject;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.icu.text.CaseMap;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
@@ -17,7 +20,7 @@ import java.util.Calendar;
 
 public class MainActivity extends Activity {
 
-    private TextView titleText, dataTitle, dataHiduke;
+    private TextView titleText;
     private Button prevButton, nextButton, yoteiButton, menuButton;
     private Adapter adapter;
     private GridView calendarGridView;
@@ -27,6 +30,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         titleText = findViewById(R.id.titleText);
         prevButton = findViewById(R.id.prevButton);
@@ -75,10 +79,6 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
-
-        dataTitle = (TextView)findViewById(R.id.dataTitle);
-        //dataHiduke = (TextView)findViewById(R.id.)
-        Calendar calendar = Calendar.getInstance();
 
 
     }

@@ -12,15 +12,13 @@
         android:layout_height="1278dp"
         android:background="#FDFCFC"
         android:orientation="vertical"
+        android:paddingTop="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="match_parent"
-            android:layout_height="112dp" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,7 +38,7 @@
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="385dp"
-                android:layout_height="120dp"
+                android:layout_height="130dp"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="予定追加"
