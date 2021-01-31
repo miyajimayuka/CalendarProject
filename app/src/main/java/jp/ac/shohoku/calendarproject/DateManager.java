@@ -41,6 +41,11 @@ public class DateManager {
         return days;
     }
 
+    //当月の要素を取得
+    //public List<Date> getdataTtile(){
+
+    //}
+
     //当月かどうか確認
     public boolean isCurrentMonth(Date date){
         SimpleDateFormat format = new SimpleDateFormat("yyyy.MM", Locale.US);

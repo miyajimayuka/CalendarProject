@@ -10,6 +10,7 @@ import android.widget.GridView;
 import android.widget.TextView;
 
 
+
 public class MainActivity extends Activity {
 
     private TextView titleText;
@@ -22,6 +23,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         titleText = findViewById(R.id.titleText);
         prevButton = findViewById(R.id.prevButton);
@@ -70,5 +72,8 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+
+
     }
+
 }
