@@ -24,7 +24,7 @@
             android:id="@+id/textView20"
             android:layout_width="match_parent"
             android:layout_height="108dp"
-            android:text="Diary"
+            android:text="    Diary"
             android:textColor="#323131"
             android:textSize="70dp" />
 
