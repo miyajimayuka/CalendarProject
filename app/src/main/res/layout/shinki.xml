@@ -8,16 +8,15 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="798dp"
-        android:layout_height="1278dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="#FDFCFC"
         android:orientation="vertical"
-        android:paddingTop="30dp"
+        android:paddingTop="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
 
 
         <LinearLayout
@@ -33,17 +32,14 @@
             android:layout_height="wrap_content"
             android:text="New schedule"
             android:textColor="#323131"
-            android:textSize="80dp" />
-
-        <TextView
-            android:id="@+id/textView43"
-            android:layout_width="match_parent"
-            android:layout_height="40dp" />
+            android:textSize="80dp"
+            android:background="#00bfff"/>
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="65dp"
+            android:layout_marginTop="20dp"
             android:text="    タイトル"
             android:textColor="#070707"
             android:textSize="30dp" />
@@ -58,9 +54,19 @@
             android:textSize="50sp" />
 
         <TextView
+            android:id="@+id/notitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="※"
+            android:textColor="#FF0000"
+            android:textSize="14sp" />
+
+        <TextView
             android:id="@+id/dateView"
             android:layout_width="match_parent"
             android:layout_height="65dp"
+            android:layout_marginTop="20dp"
             android:text="    日付"
             android:textColor="#070707"
             android:textSize="30dp" />
@@ -75,7 +81,7 @@
             android:ems="10"
             android:inputType="date"
             android:text="日付選択"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/nodate"
@@ -85,12 +91,22 @@
             android:ems="10"
             android:inputType="date"
             android:text="日付を選択してください"
-            android:textSize="24sp" />
+            android:textSize="40sp" />
 
-    <TextView
+        <TextView
+            android:id="@+id/emptydate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="※"
+            android:textColor="#FF0000"
+            android:textSize="14sp" />
+
+        <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="47dp"
+            android:layout_marginTop="20dp"
             android:text="    メモ"
             android:textColor="#090909"
             android:textSize="30dp" />
@@ -99,41 +115,18 @@
             android:id="@+id/memotext"
             android:layout_width="match_parent"
             android:layout_height="142dp"
-            android:ems="10"
+            android:layout_marginTop="20dp"
+            android:ems="5"
             android:inputType="textPersonName"
             android:textColorHint="#111111"
             android:textSize="30dp"
             android:textColorLink="#111111" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="95dp"
-            android:orientation="horizontal">
-
-            <Switch
-                android:id="@+id/switch1"
-                android:layout_width="653dp"
-                android:layout_height="106dp"
-                android:layout_weight="1"
-                android:text="       通知"
-                android:textSize="30dp" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="57dp"
-                android:layout_weight="1" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="match_parent"
-            android:layout_height="40dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="96dp"
+            android:layout_marginTop="150dp"
             android:orientation="horizontal">
 
             <Button

@@ -8,7 +8,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -19,7 +18,6 @@ import android.view.ViewGroup;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.View.OnClickListener;
 import android.view.View.OnCreateContextMenuListener;
-import android.view.View.OnLongClickListener;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
@@ -67,7 +65,6 @@ public class TodoActivity extends Activity implements OnClickListener{
         dbAdapter.open();
         Cursor c = dbAdapter.getAllNotes();
 
-        startManagingCursor(c);
 
         if(c.moveToFirst()){
             do {
@@ -80,7 +77,6 @@ public class TodoActivity extends Activity implements OnClickListener{
             } while(c.moveToNext());
         }
 
-        stopManagingCursor(c);
         dbAdapter.close();
 
         listAdapter.notifyDataSetChanged();

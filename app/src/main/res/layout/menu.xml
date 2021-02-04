@@ -63,25 +63,13 @@
             android:layout_width="match_parent"
             android:layout_height="40dp" />
 
-        <Button
-            android:id="@+id/button10"
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:text="➢天気予報"
-            android:textColor="#373434"
-            android:textSize="30sp" />
-
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="match_parent"
-            android:layout_height="40dp" />
 
         <Button
             android:id="@+id/button11"
             android:layout_width="match_parent"
             android:layout_height="140dp"
             android:background="#FCA8A7A7"
-            android:text="戻る➢"
+            android:text="➢戻る"
             android:textColor="#373434"
             android:textColorHint="#4E4343"
             android:textSize="30sp" />

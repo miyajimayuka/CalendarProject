@@ -2,15 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginTop="10dp">
 
     <TextView
         android:id="@+id/todo"
         android:layout_width="match_parent"
         android:layout_height="130dp"
         android:background="#00bfff"
-        android:gravity="center_horizontal"
-        android:text="Todoリスト"
+        android:text=" Todoリスト"
+        android:textColor="#323131"
         android:textSize="100dp" />
 
     <ListView
@@ -28,8 +29,9 @@
             android:id="@+id/memoEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="textMultiLine">
+            android:layout_weight="5"
+            android:inputType="textMultiLine"
+            android:textSize="50sp">
 
             <requestFocus />
         </EditText>
@@ -38,6 +40,7 @@
             android:id="@+id/saveButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="保存" />
+            android:text="保存"
+            android:textSize="30dp"/>
     </LinearLayout>
 </LinearLayout>

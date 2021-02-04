@@ -9,6 +9,8 @@ import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -24,7 +26,6 @@ public class Adapter extends BaseAdapter {
     //カスタムセルを拡張したらここでWigetを定義
     private static class ViewHolder {
         public TextView dateText;
-
     }
 
     public Adapter(Context context){
@@ -48,7 +49,6 @@ public class Adapter extends BaseAdapter {
             holder.dateText = convertView.findViewById(R.id.dateText);
             convertView.setTag(holder);
 
-
         } else {
             holder = (ViewHolder)convertView.getTag();
         }
@@ -61,8 +61,6 @@ public class Adapter extends BaseAdapter {
         //日付のみ表示させる
         SimpleDateFormat dateFormat = new SimpleDateFormat("d", Locale.US);
         holder.dateText.setText(dateFormat.format(dateArray.get(position)));
-
-
 
         //当月以外のセルをグレーアウト
         if (mDateManager.isCurrentMonth(dateArray.get(position))){
@@ -98,13 +96,13 @@ public class Adapter extends BaseAdapter {
     @Override
     public long getItemId(int position) {
 
-        return 0;
+        return position;
     }
 
     @Override
     public Object getItem(int position) {
 
-        return null;
+        return dateArray.get(position);
     }
 
     //表示月を取得

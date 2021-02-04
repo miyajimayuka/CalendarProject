@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MenuActivity extends Activity {
 
-    private Button modoru, todo, weather;
+    private Button modoru, todo, weather, diary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +42,15 @@ public class MenuActivity extends Activity {
             }
         });
 
-        Button weather = (Button) findViewById(R.id.button10);
-        weather.setOnClickListener(new View.OnClickListener() {
+        Button diary = (Button) findViewById(R.id.button9);
+        diary.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this, WeatherMainActivity.class);
+                //インテントに、この画面と、遷移する別の画面を指定する
+                Intent intent = new Intent(MenuActivity.this, DiaryListActivity.class);
+
+                //インテントで指定した別の画面に遷移する
                 startActivity(intent);
             }
         });

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="798dp"
@@ -16,130 +15,99 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView12"
-            android:layout_width="match_parent"
-            android:layout_height="40dp" />
-
-        <TextView
             android:id="@+id/textView20"
             android:layout_width="match_parent"
             android:layout_height="108dp"
-            android:text="    Diary"
+            android:text="Diary"
             android:textColor="#323131"
-            android:textSize="70dp" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="match_parent"
-            android:layout_height="40dp" />
+            android:textSize="70dp"
+            android:background="#00bfff"/>
 
         <TextView
             android:id="@+id/textView21"
             android:layout_width="match_parent"
             android:layout_height="80dp"
+            android:layout_marginTop="50dp"
             android:text="  タイトル"
             android:textColor="#323131"
             android:textSize="50dp" />
 
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/editTitle"
             android:layout_width="match_parent"
             android:layout_height="110dp"
             android:ems="10"
-            android:inputType="textPersonName" />
-
-        <TextView
-            android:id="@+id/textView23"
-            android:layout_width="match_parent"
-            android:layout_height="40dp" />
+            android:textSize="40dp"/>
 
         <TextView
             android:id="@+id/textView14"
             android:layout_width="match_parent"
+            android:layout_marginTop="50dp"
             android:text="   日付"
             android:textSize="50dp"
             android:textColor="#323131"
             android:layout_height="80dp" />
 
 
-        <Button
-            android:id="@+id/button5"
+        <EditText
+            android:id="@+id/editdate"
             android:layout_width="match_parent"
-            android:layout_height="69dp"
-            android:text="日付選択"
+            android:layout_height="110dp"
+            android:ems="10"
+            android:lines="1"
             android:textSize="30dp"/>
 
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="match_parent"
-            android:textSize="30dp"
-            android:text="                                日付を選択してください。"
-            android:layout_height="40dp" />
-
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="match_parent"
-            android:layout_height="40dp" />
-
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="match_parent"
-            android:text="   天気"
-            android:textSize="50dp"
-            android:textColor="#323131"
-            android:layout_height="80dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="71dp"
-            android:orientation="horizontal">
-
-            <CheckBox
-                android:id="@+id/checkBox2"
-                android:layout_width="141dp"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                android:text="    晴れ　☀"
-                android:textSize="30dp" />
-
-            <CheckBox
-                android:id="@+id/checkBox3"
-                android:layout_width="160dp"
-                android:layout_height="74dp"
-                android:layout_weight="1"
-                android:text="    曇り　☁"
-                android:textSize="30dp" />
-
-            <CheckBox
-                android:id="@+id/checkBox4"
-                android:layout_width="wrap_content"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                android:text="   雨　☔"
-                android:textSize="30dp" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textView19"
-            android:layout_width="match_parent"
-            android:layout_height="40dp" />
 
         <TextView
             android:id="@+id/textView18"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="    今日あった出来事を入力してください。"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="今日あった出来事を入力してください。"
             android:textColor="#323131"
             android:textSize="40dp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/editText"
             android:layout_width="match_parent"
-            android:layout_height="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:hint="日記を入力"
+            android:inputType="textMultiLine"
+            android:lines="1"
+            android:textSize="30dp"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_marginTop="300dp"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
 
+            <Button
+                android:id="@+id/reButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="戻る"
+                android:textSize="50dp" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="保存"
+                android:textSize="50dp" />
+
+            <Button
+                android:id="@+id/readButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="表示"
+                android:textSize="50dp" />
+
+        </LinearLayout>
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
