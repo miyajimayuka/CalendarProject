@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DateBaseAdapter {
 
-    private final static String DB_NAME = "plans.db";      // DB名
+    private final static String DB_NAME = "Plans.db";      // DB名
     private final static String DB_TABLE = "mySheet";       // DBのテーブル名
     private final static int DB_VERSION = 1;                // DBのバージョン
 
@@ -130,7 +130,7 @@ public class DateBaseAdapter {
             //第2引数：DB名
             //第3引数：factory nullでよい
             //第4引数：DBのバージョン
-            super(context, "plans.db", null, 1);
+            super(context, "Plans.db", null, 1);
         }
 
         /**

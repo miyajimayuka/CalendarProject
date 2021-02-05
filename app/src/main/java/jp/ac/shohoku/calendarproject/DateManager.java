@@ -10,6 +10,8 @@ import java.util.Locale;
 
 public class DateManager {
     Calendar mCalendar;
+    List<DataItem> dataItem;
+
 
     public DateManager(){
         mCalendar = Calendar.getInstance();
@@ -40,11 +42,6 @@ public class DateManager {
 
         return days;
     }
-
-    //当月の要素を取得
-    //public List<Date> getdataTtile(){
-
-    //}
 
     //当月かどうか確認
     public boolean isCurrentMonth(Date date){

@@ -17,17 +17,16 @@
         <TextView
             android:id="@+id/textView20"
             android:layout_width="match_parent"
-            android:layout_height="108dp"
+            android:layout_height="130dp"
             android:text="Diary"
             android:textColor="#323131"
-            android:textSize="70dp"
+            android:textSize="100dp"
             android:background="#00bfff"/>
 
         <TextView
             android:id="@+id/textView21"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_marginTop="50dp"
             android:text="  タイトル"
             android:textColor="#323131"
             android:textSize="50dp" />
@@ -38,7 +37,9 @@
             android:layout_width="match_parent"
             android:layout_height="110dp"
             android:ems="10"
-            android:textSize="40dp"/>
+            android:textSize="40dp"
+            android:maxLines="1"
+            android:inputType="text"/>
 
         <TextView
             android:id="@+id/textView14"
@@ -55,8 +56,9 @@
             android:layout_width="match_parent"
             android:layout_height="110dp"
             android:ems="10"
-            android:lines="1"
-            android:textSize="30dp"/>
+            android:maxLines="1"
+            android:textSize="30dp"
+            android:inputType="text"/>
 
 
         <TextView
@@ -76,8 +78,8 @@
             android:layout_marginTop="50dp"
             android:ems="10"
             android:hint="日記を入力"
-            android:inputType="textMultiLine"
-            android:lines="1"
+            android:maxLines="1"
+            android:inputType="text"
             android:textSize="30dp"/>
 
         <LinearLayout
@@ -85,7 +87,8 @@
             android:layout_height="96dp"
             android:layout_marginTop="300dp"
             android:orientation="horizontal"
-            android:paddingBottom="10dp">
+            android:paddingBottom="10dp"
+            android:gravity="right">
 
             <Button
                 android:id="@+id/reButton"
@@ -94,19 +97,28 @@
                 android:text="戻る"
                 android:textSize="50dp" />
 
-            <Button
-                android:id="@+id/saveButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="保存"
-                android:textSize="50dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:gravity="right">
 
-            <Button
-                android:id="@+id/readButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="表示"
-                android:textSize="50dp" />
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="保存"
+                    android:textSize="50dp" />
+
+                <Button
+                    android:id="@+id/readButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="表示"
+                    android:textSize="50dp" />
+
+            </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
